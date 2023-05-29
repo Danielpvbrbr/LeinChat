@@ -6,6 +6,8 @@ import img from '../../assets/Example/StockSnap_26ESMVYWAN.jpg';
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../../Components/Button';
 import Publication from '../../Components/Publication';
+import PhotoProfileEdt from '../../Components/PhotoProfileEdt';
+
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -47,7 +49,6 @@ const DATA = [
 const Profile = (props) => {
     const [selectedId, setSelectedId] = useState();
 
-
     return (
         <View style={[Styles.container]}>
             <ScrollView style={{ width: props.width }}>
@@ -56,18 +57,7 @@ const Profile = (props) => {
                     <TouchableOpacity style={Styles.camCoverIco}>
                         <Entypo name="camera" size={15} color="#fff" />
                     </TouchableOpacity>
-
-                    <LinearGradient
-                        start={{ x: 0.0, y: 0.1 }}
-                        end={{ x: 0.1, y: 1.0 }}
-                        colors={['#FF9900', '#00FFF0']}
-                        style={Styles.ciclePerfil}
-                    >
-                        <Image source={img} style={Styles.photoPerfil} />
-                        <TouchableOpacity style={Styles.camIco}>
-                            <Entypo name="camera" size={15} color="#fff" />
-                        </TouchableOpacity>
-                    </LinearGradient>
+                    <PhotoProfileEdt img={'https://visualjeans.com.br/imagens/home/img-lookbook-mulher.jpg?v=10.14'} />
                 </View>
 
                 <View style={[Styles.area, { width: props.width }]}>
@@ -92,24 +82,47 @@ const Profile = (props) => {
                     </View>
 
                     <View style={{ width: props.width, borderWidth: 0.2, borderColor: '#E7E5E5' }} />
-                    
+
                     <View style={[Styles.areaButton, { width: props.width - 28 }]}>
-                        <Button
-                            text='Acompanhar'
-                            color='#fff'
-                            background='#FF9900'
-                            width={170}
-                            height={40}
-                            onPress={() => alert('s')}
-                        />
-                        <Button
-                            text='Mensagem'
-                            color='#585858'
-                            background='#E7E5E5'
-                            width={170}
-                            height={40}
-                            onPress={() => alert('s')}
-                        />
+                        {true ? <>
+                            <Button
+                                text='Editar Perfil'
+                                color='#fff'
+                                background='#FF9900'
+                                width={170}
+                                height={40}
+                                onPress={() => props.navigation.navigate('EditProfile')}
+                            />
+                            <Button
+                                text='Nova Publicação'
+                                color='#585858'
+                                background='#E7E5E5'
+                                width={170}
+                                height={40}
+                                size={14}
+                                onPress={() => alert('Nova Publicação')}
+                            />
+                        </>
+                            :
+                            <>
+                                <Button
+                                    text='Acompanhar'
+                                    color='#fff'
+                                    background='#FF9900'
+                                    width={170}
+                                    height={40}
+                                    onPress={() => alert('seguir')}
+                                />
+                                <Button
+                                    text='Mensagem'
+                                    color='#585858'
+                                    background='#E7E5E5'
+                                    width={170}
+                                    height={40}
+                                    onPress={() => alert('Mensagem')}
+                                />
+                            </>}
+
                     </View>
                 </View>
                 <View style={[{ width: props.width }]} >

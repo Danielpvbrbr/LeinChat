@@ -15,6 +15,17 @@ import Notification from "../Views/Pages/Notification";
 import Profile from "../Views/Profile";
 import New from "../Views/New";
 
+///Pages
+import EditProfile from "../Views/Pages/Pages_Config/EditProfile";
+import ConfigPrivacy from "../Views/Pages/Pages_Config/ConfigPrivacy";
+import Account from "../Views/Pages/Pages_Config/Account";
+import Privacy from "../Views/Pages/Pages_Config/Privacy";
+import Security from "../Views/Pages/Pages_Config/Security";
+import Notifications from "../Views/Pages/Pages_Config/Notifications";
+import Password from "../Views/Pages/Pages_Config/Password";
+import Delete_isabled from "../Views/Pages/Pages_Config/Delete_isabled";
+import Comments from "../Views/Pages/Pages_Config/Comments";
+
 const Tabs = (props) => {
 
     return (
@@ -39,7 +50,7 @@ const Tabs = (props) => {
 
             <Tab.Screen name="Amigos" options={{
                 headerShown: true,
-                headerTitle: (rest) => <Header {...rest} height={props.height} width={props.width} />,
+                // headerTitle: (rest) => <Header {...rest} height={props.height} width={props.width} />,
                 tabBarLabel: 'Amigos',
                 tabBarActiveTintColor: '#FF9900',
                 tabBarBadge: 3,
@@ -66,8 +77,8 @@ const Tabs = (props) => {
 
             <Tab.Screen name="Chat" options={{
                 headerShown: true,
-                headerTitle: 'Teste3',
-                tabBarLabel: 'Notificação',
+                headerTitle: 'Messages',
+                tabBarLabel: 'Chat',
                 tabBarBadge: 3,
                 tabBarActiveTintColor: '#FF9900',
                 tabBarIcon: ({ color, size }) => (
@@ -127,6 +138,87 @@ const AppRoutes = (props) => {
                 name="Perfil"
             >
                 {rest => <Profile {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="EditProfile"
+                options={{
+                    headerTitle: 'Editar Perfil',
+                }}
+            >
+                {rest => <EditProfile {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="ConfigPrivacy"
+                options={{
+                    headerTitle: 'Configuração e Privacidade',
+                }}
+            >
+                {rest => <ConfigPrivacy {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Account"
+                options={{
+                    headerTitle: 'Minha Conta',
+                }}
+            >
+                {rest => <Account {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Privacy"
+                options={{
+                    headerTitle: 'Privacidade',
+                }}
+            >
+                {rest => <Privacy {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Security"
+                options={{
+                    headerTitle: 'Segurança',
+                }}
+            >
+                {rest => <Security {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Notifications"
+                options={{
+                    headerTitle: 'Notificações',
+                }}
+            >
+                {rest => <Notifications {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Password"
+                options={{
+                    headerTitle: 'Senha',
+                }}
+            >
+                {rest => <Password {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Delete_isabled"
+                options={{
+                    headerTitle: 'Desativar / Deletar ',
+                }}
+            >
+                {rest => <Delete_isabled {...rest} height={props.height} width={props.width} />}
+            </Stack.Screen>
+
+            <Stack.Screen
+                name="Comments"
+                options={{
+                    headerTitle: 'Comentários',
+                }}
+            >
+                {rest => <Comments {...rest} height={props.height} width={props.width} />}
             </Stack.Screen>
         </Stack.Navigator>
 

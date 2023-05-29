@@ -16,7 +16,6 @@ const SignUp = () => {
                     source={require('./../../../assets/logo/LeinChat.png')}
 
                 />
-
                 <View style={Styles.Form}>
                     <InputBorderBottom
                         title='Email ou Usuario'
@@ -24,6 +23,9 @@ const SignUp = () => {
                         placeholder=''
                         onChangeText={setUser}
                         value={user}
+                        width={330}
+                        height={40}
+                        marginBottom={22}
                         iconName=''
                         iconSize={0}
                         iconColor=''
@@ -35,6 +37,8 @@ const SignUp = () => {
                         placeholder=''
                         onChangeText={setPassword}
                         value={password}
+                        width={330}
+                        height={40}
                         iconName='eye'
                         iconSize={20}
                         iconColor='#999999'

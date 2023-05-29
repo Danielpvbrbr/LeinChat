@@ -1,36 +1,29 @@
 import { StyleSheet } from 'react-native';
 
 export const Styles = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  Area: {
-    height: 400,
+  area: {
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
-  Form: {
-    height: 190,
+  areaPhoto: {
+    width: '100%',
+    height: 80,
     alignItems: 'center',
-    justifyContent: 'space-around',
-  },
-  TextForgot: {
-    color: '#999999',
-    fontWeight: 'bold',
-    alignSelf: 'center',
     justifyContent: 'center',
-    marginTop:10
   },
-  AreaButton: {
-    height: 100,
+  select: {
+    height: 50,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  Logo: {
-    width:167,
-    height: 52,
-  },
+  title: {
+    fontSize: 16
+  }
 });

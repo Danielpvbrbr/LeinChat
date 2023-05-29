@@ -5,7 +5,7 @@ import { Styles } from './styles';
 import * as ImagePicker from 'expo-image-picker';
 import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 import img from '../../assets/Example/StockSnap_26ESMVYWAN.jpg'
-marginTop: 10
+
 const New = (props) => {
     const [image, setImage] = useState(null);
     // const [isModal, setIsModal] = useState(true);
@@ -88,7 +88,7 @@ const New = (props) => {
                             />
                         </View>
                         <View style={[Styles.select]}>
-                            <Text>Permitir comentarios</Text>
+                            <Text>Marcar Amigos</Text>
                         </View>
                         <View style={[Styles.select]}>
                             <Text>Exclusão Automática em 24h</Text>
