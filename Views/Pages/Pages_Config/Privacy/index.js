@@ -30,6 +30,16 @@ const Privacy = (props) => {
                     />
                 </Pressable>
 
+                <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('Blocked')}>
+                    <View style={Styles.button}>
+                        <Entypo name="block" size={15} color="#999999" />
+                        <Text style={Styles.textbtn}>Bloqueados</Text>
+                    </View>
+                    <Entypo name="chevron-right" size={20} color="#999999" />
+                </Pressable>
+
+                <Text style={{ fontSize: 14, color: '#999999', margin: 10 }}>Quem pode ver ?</Text>
+
                 <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('Comments')}>
                     <View style={Styles.button}>
                         <FontAwesome name="comment" size={15} color="#999999" />
@@ -38,7 +48,7 @@ const Privacy = (props) => {
                     <Entypo name="chevron-right" size={20} color="#999999" />
                 </Pressable>
 
-                <Pressable style={Styles.buttonArea} onPress={() => alert('')}>
+                <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('Mentions')}>
                     <View style={Styles.button}>
                         <AntDesign name="enter" size={15} color="#999999" />
                         <Text style={Styles.textbtn}>Menções</Text>
@@ -46,7 +56,7 @@ const Privacy = (props) => {
                     <Entypo name="chevron-right" size={20} color="#999999" />
                 </Pressable>
 
-                <Pressable style={Styles.buttonArea} onPress={() => alert('')}>
+                <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('Sharing')}>
                     <View style={Styles.button}>
                         <FontAwesome name="share" size={15} color="#999999" />
                         <Text style={Styles.textbtn}>Compartilhamento</Text>
@@ -54,7 +64,7 @@ const Privacy = (props) => {
                     <Entypo name="chevron-right" size={20} color="#999999" />
                 </Pressable>
 
-                <Pressable style={Styles.buttonArea} >
+                <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('Comments')}>
                     <View style={Styles.button}>
                         <FontAwesome name="history" size={15} color="#999999" />
                         <Text style={Styles.textbtn}>Resposta no Story</Text>

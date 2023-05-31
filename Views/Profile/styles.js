@@ -103,9 +103,10 @@ export const Styles = StyleSheet.create({
     marginTop: 5
   },
   areaButton: {
-    height: 51,
+    height: 56,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: 6
   },
 });

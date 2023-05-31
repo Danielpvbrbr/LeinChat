@@ -31,14 +31,16 @@ const Friends = (props) => {
                             background={filter === 'Sigestôes' ? '#FF9900' : '#E7E5E5'}
                             width={113}
                             height={35}
+                            size={14}
                             onPress={() => setFilter('Sigestôes')}
                         />
                         <Button
                             text='Acompanhantes'
                             color={filter === 'Acompanhantes' ? '#fff' : '#585858'}
                             background={filter === 'Acompanhantes' ? '#FF9900' : '#E7E5E5'}
-                            width={100}
+                            width={104}
                             height={35}
+                            size={10.5}
                             onPress={() => setFilter('Acompanhantes')}
                         />
                         <Button
@@ -47,6 +49,7 @@ const Friends = (props) => {
                             background={filter === 'Solicitações' ? '#FF9900' : '#E7E5E5'}
                             width={100}
                             height={35}
+                            size={14}
                             onPress={() => setFilter('Solicitações')}
                         />
                     </>

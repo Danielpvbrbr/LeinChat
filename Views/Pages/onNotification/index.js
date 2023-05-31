@@ -4,7 +4,7 @@ import { Styles } from './styles';
 // import Button from '../../../../Components/Button';
 // import Logo from '../../../../assets/logo/Logo.png';
 
-const Notification = () => {
+const OnNotification = () => {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
@@ -16,4 +16,4 @@ const Notification = () => {
     )
 };
 
-export default Notification;
+export default OnNotification;

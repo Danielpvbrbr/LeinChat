@@ -9,7 +9,7 @@ const Account = (props) => {
     return (
         <View style={[Styles.container]}>
             <View style={[Styles.area, { width: props.width - 35 }]}>
-                <Pressable style={Styles.buttonArea} onPress={() => alert('')}>
+                <Pressable style={Styles.buttonArea} onPress={() => props.navigation.navigate('MyData')}>
                     <View style={Styles.button}>
                         <MaterialIcons name="data-usage" size={15} color="#999999" />
                         <Text style={Styles.textbtn}>Meus dados</Text>

@@ -91,6 +91,7 @@ const Profile = (props) => {
                                 background='#FF9900'
                                 width={170}
                                 height={40}
+                                size={14}
                                 onPress={() => props.navigation.navigate('EditProfile')}
                             />
                             <Button
@@ -100,7 +101,7 @@ const Profile = (props) => {
                                 width={170}
                                 height={40}
                                 size={14}
-                                onPress={() => alert('Nova Publicação')}
+                                onPress={() => props.navigation.navigate('New')}
                             />
                         </>
                             :
@@ -111,6 +112,7 @@ const Profile = (props) => {
                                     background='#FF9900'
                                     width={170}
                                     height={40}
+                                    size={14}
                                     onPress={() => alert('seguir')}
                                 />
                                 <Button
@@ -119,6 +121,7 @@ const Profile = (props) => {
                                     background='#E7E5E5'
                                     width={170}
                                     height={40}
+                                    size={14}
                                     onPress={() => alert('Mensagem')}
                                 />
                             </>}

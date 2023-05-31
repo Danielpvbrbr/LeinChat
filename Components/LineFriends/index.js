@@ -23,6 +23,7 @@ const LineFriends = (props) => {
                     color={accompany ? '#fff' : '#585858'}
                     background={accompany ? '#FF9900' : '#E7E5E5'}
                     width={102}
+                    size={13}
                     height={30}
                     onPress={() => setAccompany(!accompany)}
                 />
@@ -33,6 +34,7 @@ const LineFriends = (props) => {
                         color={'#fff'}
                         background={'#FF9900'}
                         width={65}
+                        size={12}
                         height={30}
                         onPress={() => setAccompany(!accompany)}
                     />
@@ -41,6 +43,7 @@ const LineFriends = (props) => {
                         color={'#fff'}
                         background={'#FF1F00'}
                         width={65}
+                        size={12}
                         height={30}
                         onPress={() => setAccompany(!accompany)}
                     />

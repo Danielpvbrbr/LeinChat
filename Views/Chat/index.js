@@ -22,7 +22,9 @@ const Chat = (props) => {
                     <Ionicons name="filter" size={24} color="black" />
                 </View>
                 <View style={Styles.list}>
-                    <TouchableOpacity style={Styles.line} >
+                    <TouchableOpacity style={Styles.line} onPress={() => props.navigation.push('Message', {
+                        name: 'Lorrane Maica'
+                    })}>
                         <PhotoProfile Img={'https://aloalobahia.com/images/p/giseeeeeelevivara_alo_alo_bahia.jpg'} />
                         <View style={Styles.lineInfo}>
                             <Text>Lorrane Maica</Text>

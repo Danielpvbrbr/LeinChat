@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, Switch } from 'react-native';
+import { View} from 'react-native';
 import { Styles } from './styles';
-import {
-    Entypo,
-} from '@expo/vector-icons';
+import { Ionicons, Entypo, Feather } from '@expo/vector-icons';
 import InputBorderBottom from '../../../../Components/InputBorderBottom';
 
-const Password = (props) => {
-    const [user, setUser] = useState(false);
+const MyData = (props) => {
+    const [user, setUser] = useState('');
+
 
     return (
         <View style={[Styles.container]}>
             <View style={[Styles.area, { width: props.width - 35 }]}>
                 <InputBorderBottom
-                    title='Senha atual'
-                    secureTextEntry={true}
+                    title='E-mail'
+                    secureTextEntry={false}
                     placeholder=''
                     width={props.width - 35}
                     height={27}
@@ -26,8 +25,8 @@ const Password = (props) => {
                     iconColor=''
                 />
                 <InputBorderBottom
-                    title='Nova Senha '
-                    secureTextEntry={true}
+                    title='Telefone'
+                    secureTextEntry={false}
                     placeholder=''
                     width={props.width - 35}
                     height={27}
@@ -39,8 +38,8 @@ const Password = (props) => {
                     iconColor=''
                 />
                 <InputBorderBottom
-                    title='Confirme a Senha'
-                    secureTextEntry={true}
+                    title='Data de Nascimento'
+                    secureTextEntry={false}
                     placeholder=''
                     width={props.width - 35}
                     height={27}
@@ -56,4 +55,4 @@ const Password = (props) => {
     )
 };
 
-export default Password;
+export default MyData;

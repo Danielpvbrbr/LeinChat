@@ -9,7 +9,7 @@ const Button = (props) => {
             width: props.width,
             height: props.height
         }]} onPress={props.onPress}>
-            <Text style={[Styles.TextButton, { color: props.color, fontSize: props.text.length > 15 ? 10 : 13 }]}>{props.text}</Text>
+            <Text style={[Styles.TextButton, { color: props.color, fontSize: props.size }]}>{props.text}</Text>
         </Pressable >
     )
 };
